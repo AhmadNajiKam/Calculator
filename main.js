@@ -12,9 +12,9 @@ const Mul = (a, b) => {
 }
 
 const Div = (a, b) => {
-  if (b != 0)
-    return a / b;
-  else return "error";
+  if (b == 0)
+    return "Error";
+  return a / b;
 }
 const operate = (op, a, b) => {
   switch (op) {
@@ -29,6 +29,8 @@ pressOnEqual.addEventListener('click', () => {
   const screen = document.querySelector(".screen");
   accumulator = operate(operation, accumulator, operator);
   screen.textContent = accumulator;
+  if (accumulator === undefined)
+    screen.textContent = "Please Enter a Number";
 });
 
 const calcInput = () => {
@@ -48,10 +50,11 @@ const populateDisplay = () => {
     element.addEventListener('click', () => {
       screen.textContent = (!isNaN(Number(element.textContent)) ? Number(element.textContent) : element.textContent === '.' ? element.textContent : null);
       chosenValue = Number(screen.textContent);
-      if (chosenValue === null) {
+      if (element.textContent === 'C') {
         operation = null;
         accumulator = null;
         operator = null;
+        chosenValue = null;
       }
       if (operation === null) accumulator = chosenValue;
       else operator = chosenValue;
