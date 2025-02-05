@@ -1,0 +1,55 @@
+.button {
+  min-width: 100px;
+  min-height: 70px;
+  border: 1px solid red;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 35px;
+}
+
+.calc {
+  display: flex;
+  max-width: 465px;
+  text-align: center;
+  flex-direction: column;
+  border: 2px pink solid;
+  padding: 10px;
+  gap: 10px;
+  font-size: 32px;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.screen {
+  min-width: 314px;
+  border: 1px red solid;
+  background-color: pink;
+  border-radius: 15px;
+}
+
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  max-width: 355px;
+}
+
+
+
+.right {
+  display: flex;
+  flex-direction: column;
+  max-width: 110px;
+  gap: 5px;
+}
+
+.top {
+  display: flex;
+  gap: 25px;
+}
+
+.bottom {
+  display: flex;
+}
