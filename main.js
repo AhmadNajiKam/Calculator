@@ -25,3 +25,15 @@ const operate = (op, a, b) => {
     case '/': return Div(a, b);
   }
 }
+const populateDisplay = () => {
+  const screen = document.querySelector(".screen");
+  const buttons = document.querySelector(".left");
+  let chosenValue;
+  buttons.childNodes.forEach(element => {
+    element.addEventListener('click', () => {
+      screen.textContent = Number(element.textContent);
+      chosenValue = Number(element.textContent);
+    });
+  });
+}
+populateDisplay();
