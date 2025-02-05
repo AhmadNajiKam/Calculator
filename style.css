@@ -26,6 +26,8 @@
   border: 1px red solid;
   background-color: pink;
   border-radius: 15px;
+  box-sizing: border-box;
+  padding: 15px;
 }
 
 .left {
